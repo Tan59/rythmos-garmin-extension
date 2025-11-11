@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Rythmos for Garmin",
+  "version": "1.0.0",
+  "description": "Exportez vos entraînements Garmin Connect vers Rythmos en un clic.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": [
+    "https://connect.garmin.com/*",
+    "https://*.garmin.com/*",
+    "https://rythmos.run/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://connect.garmin.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["share-your-workout.js"],
+      "matches": ["https://connect.garmin.com/*"]
+    }
+  ],
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_icon": "icons/icon128.png",
+    "default_title": "Rythmos for Garmin"
+  }
+}
