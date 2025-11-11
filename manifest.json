@@ -3,12 +3,8 @@
   "name": "Rythmos for Garmin",
   "version": "1.0.0",
   "description": "Exportez vos entraînements Garmin Connect vers Rythmos en un clic.",
-  "permissions": ["scripting", "activeTab", "storage"],
-  "host_permissions": [
-    "https://connect.garmin.com/*",
-    "https://*.garmin.com/*",
-    "https://rythmos.run/*"
-  ],
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["https://connect.garmin.com/*"],
   "background": {
     "service_worker": "background.js"
   },

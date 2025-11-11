@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "zip": "bash scripts/zip-extension.sh"
+  }
+}
