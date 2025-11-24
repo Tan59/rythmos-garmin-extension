@@ -19,7 +19,7 @@
   "web_accessible_resources": [
     {
       "resources": ["share-your-workout.js"],
-      "matches": ["https://connect.garmin.com/*"]
+      "matches": ["https://connect.garmin.com/*", "https://rythmos.run/*"]
     }
   ],
   "icons": {
